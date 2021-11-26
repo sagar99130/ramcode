@@ -1,0 +1,37 @@
+<div> 
+    <br/>
+    <!-- <div *ngIf="!formSubmitted" [ngClass] = "'error'"> Form not validated. </div> -->
+    <br/>
+    <form [formGroup]="authFormdata" (ngSubmit)="onClickLogin(authFormdata.value)" > 
+       <input type="text"  name="username" placeholder="username" 
+          formControlName = "email"> 
+       <br/>
+       <!-- <label *ngIf="!formdata.userName" [ngClass] = "'error'"> Name is required with 10 max character. </label> -->
+       <br/>
+
+       <input type="text"  name="password" placeholder="password" 
+       formControlName = "password"> 
+       <!-- <input type="text"  name="userSuranme" placeholder="surname" 
+       formControlName = "userSuranme"> 
+      
+       <div>
+        Select Gender:
+        <input type="radio" formControlName="gender" value="male"> Male
+        <input type="radio" formControlName="gender" value="female" > Female
+        </div>
+
+        <div>
+            Select Profile:
+            <select formControlName="profile">
+              <option *ngFor="let pf of profiles" [ngValue]="pf.shortName">
+                    {{ pf.name }}
+              </option>
+            </select>
+          </div>  -->
+    <br/>
+    <br/>
+       <input type="submit"  value="Save">   &nbsp; &nbsp; &nbsp;
+       <button type="button" (click) = "resetForm()">Reset</button>
+    </form>
+ </div> 
+ <p> Textbox result is: {{userName}} </p>
